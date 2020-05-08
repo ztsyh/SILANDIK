@@ -1,2 +1,2 @@
 # Laboratorium
-Sistem Informasi Laboratorium Pendidikan
+Sistem Informasi Online Laboratorium Pendidikan
