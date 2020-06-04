@@ -4,13 +4,13 @@
       <div class="col-lg-12">
         <div class="box box-primary">
           <div class="box-header with-border">
-            <h3 class="box-title">Master Bahan</h3>
+            <h3 class="box-title">Nama Bahan</h3>
 
             <div class="box-tools pull-right">
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/master_bahan/form/base","#modal")','Add New Nama Bahan','btn btn-success');
+                echo button('load_silent("master/nama_alat/form/base","#modal")','Add New Nama Alat','btn btn-success');
               } else {
                 # code...
               }
@@ -25,6 +25,7 @@
                 <th>Jenis Bahan</th>
                 <th>Nama Bahan</th>
                 <th>Tahun</th>
+                <th>Pengarang</th>
                 <th>Act</th>
               </thead>
               <tbody>
@@ -37,18 +38,16 @@
             <td align="center"><?=$row->jenis_bahan?></td>
             <td align="center"><?=$row->nama_bahan?></td>
             <td align="center"><?=$row->tahun?></td>
+            <td align="center"><?=$row->pengarang?></td>
             <td align="center">
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/master_bahan/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
+                echo button('load_silent("master/nama_alat/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
               } else {
                 # code...
               }
               ?>
-              <a href="<?= site_url('master/master_bahan/delete/'.$row->id) ?>" class="btn btn-danger"
-              onclick="return confirm('Anda yakin ingin menghapus bahan?')"><i class="fa fa-trash"></i>
-              </a>
             </td>
           </tr>
 
