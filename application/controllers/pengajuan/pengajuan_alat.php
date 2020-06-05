@@ -38,8 +38,8 @@ class Pengajuan_alat extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'nama_alat',
-					'label' => 'nama_alat',
+					'field'	=> 'kode',
+					'label' => 'kode',
 					'rules' => 'required'
 				)
 			);
@@ -53,7 +53,7 @@ class Pengajuan_alat extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','nama_alat','jenis','keterangan','id_status'));
+			$datapost = get_post_data(array('id','kode','nama_alat','jenis','keterangan','id_status'));
 			$this->m_pengajuan_alat->insertData($datapost);
 			$this->fungsi->run_js('load_silent("pengajuan/pengajuan_alat","#content")');
 			$this->fungsi->message_box("Data pengajuan alat sukses disimpan...","success");
@@ -72,8 +72,8 @@ class Pengajuan_alat extends CI_Controller {
 					'rules' => ''
 				),
 				array(
-					'field'	=> 'nama_alat',
-					'label' => 'nama_alat',
+					'field'	=> 'kode',
+					'label' => 'kode',
 					'rules' => 'required'
 				)
 			);
@@ -88,7 +88,7 @@ class Pengajuan_alat extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','nama_alat','jenis','keterangan'));
+			$datapost = get_post_data(array('id','kode','nama_alat','jenis','keterangan'));
 			$this->m_pengajuan_alat->updateData($datapost);
 			$this->fungsi->run_js('load_silent("pengajuan/pengajuan_alat","#content")');
 			$this->fungsi->message_box("Data pengajuan alat sukses diperbarui...","success");
