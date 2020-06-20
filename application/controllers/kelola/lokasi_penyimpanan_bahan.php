@@ -55,7 +55,7 @@ class Lokasi_penyimpanan_bahan extends CI_Controller {
 		{
 			$datapost = get_post_data(array('no','id','kode_bahan','kode_rak','urutan'));
 			$this->m_lokasi_penyimpanan_bahan->insertData($datapost);
-			$this->fungsi->run_js('load_silent("master/lokasi_penyimpanan_bahan","#content")');
+			$this->fungsi->run_js('load_silent("kelola/lokasi_penyimpanan_bahan","#content")');
 			$this->fungsi->message_box("Data lokasi penyimpanan bahan sukses disimpan...","success");
             $this->fungsi->catat($datapost,"Menambah data lokasi penyimpanan bahan dengan data sbb:",true);
         }
@@ -79,7 +79,7 @@ class Lokasi_penyimpanan_bahan extends CI_Controller {
 		{
 			$data['edit'] = $this->db->get_where('lokasi_penyimpanan_bahan',array('id'=>$id));
 			$data['status']='';
-			$this->load->view('master/lokasi_penyimpanan_bahan/v_lokasi_penyimpanan_bahan_edit',$data);
+			$this->load->view('kelola/lokasi_penyimpanan_bahan/v_lokasi_penyimpanan_bahan_edit',$data);
 		}
 		else
 		{
@@ -98,6 +98,3 @@ class Lokasi_penyimpanan_bahan extends CI_Controller {
                 redirect('admin');
             }
 }
-
-/* End of file satuan.php */
-/* Location: ./application/controllers/master/satuan.php */

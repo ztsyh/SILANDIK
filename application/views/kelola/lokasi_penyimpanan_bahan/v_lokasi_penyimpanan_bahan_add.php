@@ -21,10 +21,10 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Kode Barang</label>
+            <label class="col-sm-4 control-label">Kode Bahan</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'kode_barang','class'=>'form-control'));?>
-            <?php echo form_error('kode_barang');?>
+            <?php echo form_input(array('name'=>'kode_bahan','class'=>'form-control'));?>
+            <?php echo form_error('kode_bahan');?>
             <span id="check_data"></span>
             </div>
         </div>
@@ -44,8 +44,6 @@
             <span id="check_data"></span>
             </div>
         </div>
-        </div>
-
         <div class="form-group">
             <label class="col-sm-4 control-label">Simpan</label>
             <div class="col-sm-8 tutup">

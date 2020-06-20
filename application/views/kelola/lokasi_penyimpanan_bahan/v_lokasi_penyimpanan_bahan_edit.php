@@ -22,10 +22,10 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Kode Barang/label>
+            <label class="col-sm-4 control-label">Kode Bahan</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'kode_barang','value'=>$row->kode_barang,'class'=>'form-control'));?>
-            <?php echo form_error('kode_barang');?>
+            <?php echo form_input(array('name'=>'kode_bahan','value'=>$row->kode_bahan,'class'=>'form-control'));?>
+            <?php echo form_error('kode_bahan');?>
             </div>
         </div>
         <div class="form-group">
@@ -46,7 +46,7 @@
             <label class="col-sm-4 control-label">Simpan</label>
             <div class="col-sm-8 tutup">
             <?php
-            echo button('send_form(document.faddmenugrup,"kelola/lokasi_penyimpanan_barang/show_editForm/","#divsubcontent")','Simpan','btn btn-success')." ";
+            echo button('send_form(document.faddmenugrup,"kelola/lokasi_penyimpanan_bahan/show_editForm/","#divsubcontent")','Simpan','btn btn-success')." ";
             ?>
             </div>
         </div>
