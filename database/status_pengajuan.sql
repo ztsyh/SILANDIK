@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Jun 2020 pada 18.48
+-- Waktu pembuatan: 28 Jun 2020 pada 18.49
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 5.6.36
 
@@ -25,33 +25,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `master_satuan`
+-- Struktur dari tabel `status_pengajuan`
 --
 
-CREATE TABLE `master_satuan` (
+CREATE TABLE `status_pengajuan` (
   `id` int(11) NOT NULL,
-  `nama_satuan` varchar(255) NOT NULL,
-  `keterangan` varchar(255) NOT NULL
+  `status_pengajuan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `master_satuan`
+-- Dumping data untuk tabel `status_pengajuan`
 --
 
-INSERT INTO `master_satuan` (`id`, `nama_satuan`, `keterangan`) VALUES
-(3, 'gram', 'massa'),
-(5, 'buah', '-'),
-(6, 'liter', 'liquid'),
-(7, 'lembar', '-');
+INSERT INTO `status_pengajuan` (`id`, `status_pengajuan`) VALUES
+(1, 'Aktif'),
+(2, 'Tidak Aktif'),
+(3, 'Pendanaan Sudah Turun'),
+(4, 'Pendanaan Belum Turun'),
+(5, 'Sudah Terverifikasi');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `master_satuan`
+-- Indeks untuk tabel `status_pengajuan`
 --
-ALTER TABLE `master_satuan`
+ALTER TABLE `status_pengajuan`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,10 +59,10 @@ ALTER TABLE `master_satuan`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `master_satuan`
+-- AUTO_INCREMENT untuk tabel `status_pengajuan`
 --
-ALTER TABLE `master_satuan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `status_pengajuan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

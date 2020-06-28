@@ -20,8 +20,8 @@ class Tipe_lab extends CI_Controller {
 	public function form($param='')
 	{
 		$content   = "<div id='divsubcontent'></div>";
-		$header    = "Form Master Tipe Lab";
-		$subheader = "tipe_lab";
+		$header    = "Form Master Tipe Laboratorium";
+		$subheader = "Tipe Laboratorium";
 		$buttons[] = button('jQuery.facebox.close()','Tutup','btn btn-default','data-dismiss="modal"');
 		echo $this->fungsi->parse_modal($header,$subheader,$content,$buttons,"");
 		if($param=='base'){
@@ -53,12 +53,12 @@ class Tipe_lab extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('kode','tipe_lab','keterangan','id_status'));
+			$datapost = get_post_data(array('id','tipe_lab','status'));
 			$this->m_tipe_lab->insertData($datapost);
 			$this->fungsi->run_js('load_silent("master/tipe_lab","#content")');
-			$this->fungsi->message_box("Data Master Tipe Lab sukses disimpan...","success");
-			$this->fungsi->catat($datapost,"Menambah Master tipe_lab dengan data sbb:",true);
-		}
+			$this->fungsi->message_box("Data master tipe laboratorium sukses disimpan...","success");
+            $this->fungsi->catat($datapost,"Menambah master tipe laboratorium dengan data sbb:",true);
+        }
 	}
 
 	public function show_editForm($id='')
@@ -68,7 +68,7 @@ class Tipe_lab extends CI_Controller {
 		$config = array(
 				array(
 					'field'	=> 'id',
-					'label' => 'wes mbarke',
+					'label' => 'id',
 					'rules' => ''
 				),
 				array(
@@ -88,14 +88,18 @@ class Tipe_lab extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','kode','tipe_lab','keterangan','id_status'));
+			$datapost = get_post_data(array('id','tipe_lab','status'));
 			$this->m_tipe_lab->updateData($datapost);
 			$this->fungsi->run_js('load_silent("master/tipe_lab","#content")');
-			$this->fungsi->message_box("Data Master Tipe Lab sukses diperbarui...","success");
-			$this->fungsi->catat($datapost,"Mengedit Master tipe_lab dengan data sbb:",true);
-		}
-	}
-}
+			$this->fungsi->message_box("Data master tipe laboratorium sukses diperbarui...","success");
+            $this->fungsi->catat($datapost,"Mengedit master tipe laboratorium dengan data sbb:",true);   
+        }  
+    }
 
-/* End of file nama_alat.php */
-/* Location: ./application/controllers/master/nama_alat.php */
+    public function delete()
+            {
+                $id = $this->uri->segment(4);
+                $this->m_tipe_lab->deleteData($id);
+                redirect('admin');
+            }
+}

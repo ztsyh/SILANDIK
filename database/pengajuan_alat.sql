@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Jun 2020 pada 20.03
+-- Waktu pembuatan: 28 Jun 2020 pada 18.49
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 5.6.36
 
@@ -29,18 +29,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `pengajuan_alat` (
-  `id` int(11) NOT NULL,
-  `nama_alat` varchar(255) NOT NULL,
-  `jenis` varchar(255) NOT NULL,
-  `keterangan` varchar(255) NOT NULL
+  `id` varchar(11) NOT NULL,
+  `nama_alat` varchar(50) NOT NULL,
+  `merk` varchar(50) NOT NULL,
+  `seri` varchar(50) NOT NULL,
+  `estimasi_jumlah` int(11) NOT NULL,
+  `satuan` varchar(50) NOT NULL,
+  `harga` int(50) NOT NULL,
+  `nama_lab` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `pengajuan_alat`
 --
 
-INSERT INTO `pengajuan_alat` (`id`, `nama_alat`, `jenis`, `keterangan`) VALUES
-(1, 'Router', 'solid', 'dibutuhkan segera');
+INSERT INTO `pengajuan_alat` (`id`, `nama_alat`, `merk`, `seri`, `estimasi_jumlah`, `satuan`, `harga`, `nama_lab`) VALUES
+('PA-20062800', 'Router', 'Netgear', 'AG5647J', 7, '5', 300000, 'Multimedia');
 
 --
 -- Indexes for dumped tables
@@ -51,16 +55,6 @@ INSERT INTO `pengajuan_alat` (`id`, `nama_alat`, `jenis`, `keterangan`) VALUES
 --
 ALTER TABLE `pengajuan_alat`
   ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT untuk tabel yang dibuang
---
-
---
--- AUTO_INCREMENT untuk tabel `pengajuan_alat`
---
-ALTER TABLE `pengajuan_alat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

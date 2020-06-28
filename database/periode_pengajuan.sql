@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Jun 2020 pada 18.48
+-- Waktu pembuatan: 28 Jun 2020 pada 18.49
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 5.6.36
 
@@ -25,44 +25,37 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `master_satuan`
+-- Struktur dari tabel `periode_pengajuan`
 --
 
-CREATE TABLE `master_satuan` (
-  `id` int(11) NOT NULL,
-  `nama_satuan` varchar(255) NOT NULL,
-  `keterangan` varchar(255) NOT NULL
+CREATE TABLE `periode_pengajuan` (
+  `id` varchar(50) NOT NULL,
+  `semester` varchar(255) NOT NULL,
+  `tgl_pengajuan` date NOT NULL,
+  `sumber_pendanaan` varchar(255) NOT NULL,
+  `tgl_pendanaan_turun` date NOT NULL,
+  `pajak` int(11) NOT NULL,
+  `status_pengajuan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `master_satuan`
+-- Dumping data untuk tabel `periode_pengajuan`
 --
 
-INSERT INTO `master_satuan` (`id`, `nama_satuan`, `keterangan`) VALUES
-(3, 'gram', 'massa'),
-(5, 'buah', '-'),
-(6, 'liter', 'liquid'),
-(7, 'lembar', '-');
+INSERT INTO `periode_pengajuan` (`id`, `semester`, `tgl_pengajuan`, `sumber_pendanaan`, `tgl_pendanaan_turun`, `pajak`, `status_pengajuan`) VALUES
+('P-PGN-20062700001', 'Ganjil', '2020-06-27', '1', '2020-08-27', 300000, '5'),
+('P-PGN-20062700002', 'Ganjil', '2020-06-27', '3', '2020-07-27', 900000, '1'),
+('P-PGN-20062800000', 'Ganjil', '2020-06-28', '2', '2020-08-21', 870000, '1');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `master_satuan`
+-- Indeks untuk tabel `periode_pengajuan`
 --
-ALTER TABLE `master_satuan`
+ALTER TABLE `periode_pengajuan`
   ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT untuk tabel yang dibuang
---
-
---
--- AUTO_INCREMENT untuk tabel `master_satuan`
---
-ALTER TABLE `master_satuan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

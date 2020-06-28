@@ -25,33 +25,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `master_satuan`
+-- Struktur dari tabel `master_sumber_pendanaan`
 --
 
-CREATE TABLE `master_satuan` (
+CREATE TABLE `master_sumber_pendanaan` (
   `id` int(11) NOT NULL,
-  `nama_satuan` varchar(255) NOT NULL,
-  `keterangan` varchar(255) NOT NULL
+  `sumber_pendanaan` varchar(225) NOT NULL,
+  `status` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `master_satuan`
+-- Dumping data untuk tabel `master_sumber_pendanaan`
 --
 
-INSERT INTO `master_satuan` (`id`, `nama_satuan`, `keterangan`) VALUES
-(3, 'gram', 'massa'),
-(5, 'buah', '-'),
-(6, 'liter', 'liquid'),
-(7, 'lembar', '-');
+INSERT INTO `master_sumber_pendanaan` (`id`, `sumber_pendanaan`, `status`) VALUES
+(1, 'BOPTN', 'Ada'),
+(2, 'Hibah Dikti', 'Ada'),
+(3, 'fakultas', 'Ada');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `master_satuan`
+-- Indeks untuk tabel `master_sumber_pendanaan`
 --
-ALTER TABLE `master_satuan`
+ALTER TABLE `master_sumber_pendanaan`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,10 +58,10 @@ ALTER TABLE `master_satuan`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `master_satuan`
+-- AUTO_INCREMENT untuk tabel `master_sumber_pendanaan`
 --
-ALTER TABLE `master_satuan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `master_sumber_pendanaan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
