@@ -644,8 +644,26 @@ class Fungsi
        
        $start_date=gregoriantojd($date_parts1[1], $date_parts1[2], $date_parts1[0]);
        $end_date=gregoriantojd($date_parts2[1], $date_parts2[2], $date_parts2[0]);
-       return $end_date - $start_date;
-        
-
+       return $end_date - $start_date;   
+    }   
+    public function count_tipelab()
+    {
+        $this->CI->load->model('master/m_tipe_lab');
+        return $this->CI->m_tipe_lab->getData()->num_rows();
+    }
+    public function count_matakuliah()
+    {
+        $this->CI->load->model('master/m_mata_kuliah');
+        return $this->CI->m_mata_kuliah->getData()->num_rows();
+    }
+    public function count_namaalat()
+    {
+        $this->CI->load->model('master/m_nama_alat');
+        return $this->CI->m_nama_alat->getData()->num_rows();
+    }
+    public function count_namabahan()
+    {
+        $this->CI->load->model('master/m_master_bahan');
+        return $this->CI->m_master_bahan->getData()->num_rows();
     }
 }

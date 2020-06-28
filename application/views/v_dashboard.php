@@ -20,7 +20,7 @@
                 ?>
                 <?php echo $avatar; ?>
                     <h5 class="description-header">SELAMAT DATANG DI <?php echo $this->config->item('project')?></h5>
-                    <span class="description-text"><?php echo button('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")','Update Profil','btn bg-red','data-toggle="tooltip" title="Update Profil"');?> 
+                    <span class="description-text"><?php echo button('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")','Update Profil','btn bg-purple','data-toggle="tooltip" title="Update Profil"');?> 
 						</span>
                   </div>
                   <!-- /.description-block -->
@@ -33,6 +33,8 @@
           </div>
           <!-- /.widget-user -->
         </div>
+
+
 <section class="content-header">
   <h1>Home
     <small>Sistem Informasi Laboratorium Pendidikan</small>
@@ -49,11 +51,11 @@
 <div class="row">
   <div class="col-md-3 col-sm-6 col-xs-12">
     <div class="info-box">
-      <span class="info-box-icon bg-aqua"><i class="fa fa-glass"></i></span>
+      <span class="info-box-icon bg-aqua"><i class="fa fa-flask"></i></span>
 
       <div class="info-box-content">
         <span class="info-box-text">Tipe Lab</span>
-        <span class="info-box-number">90</span>
+        <span class="info-box-number"><?=$this->fungsi->count_tipelab()?></span>
 </div>
 <!-- /.info-box-content -->
 </div>
@@ -67,7 +69,7 @@
 
       <div class="info-box-content">
         <span class="info-box-text">Mata Kuliah</span>
-        <span class="info-box-number">90</span>
+        <span class="info-box-number"><?=$this->fungsi->count_matakuliah()?></span>
 </div>
 <!-- /.info-box-content -->
 </div>
@@ -77,11 +79,11 @@
 <div class="row">
   <div class="col-md-3 col-sm-6 col-xs-12">
     <div class="info-box">
-      <span class="info-box-icon bg-blue"><i class="fa fa-Wrench"></i></span>
+      <span class="info-box-icon bg-blue"><i class="fa fa-wrench"></i></span>
 
       <div class="info-box-content">
         <span class="info-box-text">Nama Alat</span>
-        <span class="info-box-number">90</span>
+        <span class="info-box-number"><?=$this->fungsi->count_namaalat()?></span>
 </div>
 <!-- /.info-box-content -->
 </div>
@@ -91,11 +93,11 @@
 <div class="row">
   <div class="col-md-3 col-sm-6 col-xs-12">
     <div class="info-box">
-      <span class="info-box-icon bg-yellow"><i class="fa fa-Wrench-plus"></i></span>
+      <span class="info-box-icon bg-yellow"><i class="fa fa-archive"></i></span>
 
       <div class="info-box-content">
         <span class="info-box-text">Nama Bahan</span>
-        <span class="info-box-number"></span>
+        <span class="info-box-number"><?=$this->fungsi->count_namabahan()?></span>
 </div>
 <!-- /.info-box-content -->
 </div>
