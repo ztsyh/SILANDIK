@@ -25,44 +25,46 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `master_satuan`
+-- Struktur dari tabel `lokasi_penyimpanan_bahan`
 --
 
-CREATE TABLE `master_satuan` (
-  `id` int(11) NOT NULL,
-  `nama_satuan` varchar(255) NOT NULL,
-  `keterangan` varchar(255) NOT NULL
+CREATE TABLE `lokasi_penyimpanan_bahan` (
+  `no` int(11) NOT NULL,
+  `id` varchar(50) NOT NULL,
+  `kode_bahan` varchar(50) NOT NULL,
+  `kode_rak` varchar(50) NOT NULL,
+  `urutan` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `master_satuan`
+-- Dumping data untuk tabel `lokasi_penyimpanan_bahan`
 --
 
-INSERT INTO `master_satuan` (`id`, `nama_satuan`, `keterangan`) VALUES
-(3, 'gram', 'massa'),
-(5, 'buah', '-'),
-(6, 'liter', 'liquid'),
-(7, 'lembar', '-');
+INSERT INTO `lokasi_penyimpanan_bahan` (`no`, `id`, `kode_bahan`, `kode_rak`, `urutan`) VALUES
+(1, 'LPB01', 'M001', '35', 3);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `master_satuan`
+-- Indeks untuk tabel `lokasi_penyimpanan_bahan`
 --
-ALTER TABLE `master_satuan`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `lokasi_penyimpanan_bahan`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `no` (`no`),
+  ADD KEY `id_bahan` (`kode_bahan`),
+  ADD KEY `kode_bahan` (`kode_bahan`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT untuk tabel `master_satuan`
+-- AUTO_INCREMENT untuk tabel `lokasi_penyimpanan_bahan`
 --
-ALTER TABLE `master_satuan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `lokasi_penyimpanan_bahan`
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

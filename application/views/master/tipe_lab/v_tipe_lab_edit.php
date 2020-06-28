@@ -7,16 +7,9 @@
     <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
         
         <div class="form-group">
-            <label class="col-sm-4 control-label">Kode</label>
+            <label class="col-sm-4 control-label">Tipe Laboratorium</label>
             <div class="col-sm-8">
             <?php echo form_hidden('id',$row->id); ?>
-            <?php echo form_input(array('name'=>'kode','value'=>$row->kode,'class'=>'form-control'));?>
-            <?php echo form_error('kode');?>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-4 control-label">Tipe Lab</label>
-            <div class="col-sm-8">
             <?php echo form_input(array('name'=>'tipe_lab','value'=>$row->tipe_lab,'class'=>'form-control'));?>
             <?php echo form_error('tipe_lab');?>
             </div>

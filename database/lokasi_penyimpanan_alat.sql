@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Jun 2020 pada 18.48
+-- Waktu pembuatan: 28 Jun 2020 pada 18.47
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 5.6.36
 
@@ -25,44 +25,44 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `master_satuan`
+-- Struktur dari tabel `lokasi_penyimpanan_alat`
 --
 
-CREATE TABLE `master_satuan` (
-  `id` int(11) NOT NULL,
-  `nama_satuan` varchar(255) NOT NULL,
-  `keterangan` varchar(255) NOT NULL
+CREATE TABLE `lokasi_penyimpanan_alat` (
+  `no` int(11) NOT NULL,
+  `id` varchar(50) NOT NULL,
+  `kode_alat` varchar(50) NOT NULL,
+  `kode_rak` varchar(50) NOT NULL,
+  `urutan` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `master_satuan`
+-- Dumping data untuk tabel `lokasi_penyimpanan_alat`
 --
 
-INSERT INTO `master_satuan` (`id`, `nama_satuan`, `keterangan`) VALUES
-(3, 'gram', 'massa'),
-(5, 'buah', '-'),
-(6, 'liter', 'liquid'),
-(7, 'lembar', '-');
+INSERT INTO `lokasi_penyimpanan_alat` (`no`, `id`, `kode_alat`, `kode_rak`, `urutan`) VALUES
+(1, 'P001', 'R001', 'A31', 5);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `master_satuan`
+-- Indeks untuk tabel `lokasi_penyimpanan_alat`
 --
-ALTER TABLE `master_satuan`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `lokasi_penyimpanan_alat`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `no` (`no`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT untuk tabel `master_satuan`
+-- AUTO_INCREMENT untuk tabel `lokasi_penyimpanan_alat`
 --
-ALTER TABLE `master_satuan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `lokasi_penyimpanan_alat`
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

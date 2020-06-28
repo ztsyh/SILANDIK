@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Jun 2020 pada 20.13
+-- Waktu pembuatan: 28 Jun 2020 pada 18.47
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 5.6.36
 
@@ -61,7 +61,13 @@ INSERT INTO `cms_menu` (`id`, `alias`, `nama`, `deskripsi`, `allowed_level`, `ur
 (129, 'gambar_depan', 'Gambar Depan', '-', '+1+2+', 'master/gambar_depan', 1, 2, 2),
 (128, 'instansi', 'Instansi', '-', '+1+2+', 'master/instansi', 1, 1, 2),
 (139, 'kategori_bahan', 'Kategori Bahan', '', '+1+2+', 'master/kategori_bahan', 1, 12, 2),
-(138, 'pengajuan_alat', 'Pengajuan Alat', '-', '+1+2+', 'pengajuan/pengajuan_alat', 1, 10, 4);
+(138, 'pengajuan_alat', 'Pengajuan Alat', '-', '+1+2+', 'pengajuan/pengajuan_alat', 1, 10, 4),
+(140, 'pengajuan_bahan', 'Pengajuan Bahan', '-', '+1+2+', 'pengajuan/pengajuan_bahan', 1, 13, 4),
+(141, 'lokasi_penyimpanan_bahan', 'Lokasi Penyimpanan Bahan', '', '+1+2+3+', 'kelola/lokasi_penyimpanan_bahan', 1, 15, 5),
+(142, 'inventaris', 'Inventaris', '', '+1+2+', 'kelola/inventaris', 1, 14, 5),
+(143, 'lokasi_penyimpanan_alat', 'Lokasi Penyimpanan Alat', '', '+1+2+3+', 'kelola/lokasi_penyimpanan_alat', 1, 15, 5),
+(144, 'periode_pengajuan', 'Periode Pengajuan', '', '+1+2+', 'pengajuan/periode_pengajuan', 1, 16, 4),
+(145, 'sumber_pendanaan', 'Sumber Pendanaan', '', '+1+2+3+', 'master/sumber_pendanaan', 1, 12, 2);
 
 --
 -- Indexes for dumped tables
@@ -81,7 +87,7 @@ ALTER TABLE `cms_menu`
 -- AUTO_INCREMENT untuk tabel `cms_menu`
 --
 ALTER TABLE `cms_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

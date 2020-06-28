@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Jun 2020 pada 18.48
+-- Waktu pembuatan: 28 Jun 2020 pada 18.49
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 5.6.36
 
@@ -25,44 +25,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `master_satuan`
+-- Struktur dari tabel `master_tipe_lab`
 --
 
-CREATE TABLE `master_satuan` (
-  `id` int(11) NOT NULL,
-  `nama_satuan` varchar(255) NOT NULL,
-  `keterangan` varchar(255) NOT NULL
+CREATE TABLE `master_tipe_lab` (
+  `id` varchar(11) NOT NULL,
+  `tipe_lab` varchar(50) NOT NULL,
+  `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `master_satuan`
+-- Dumping data untuk tabel `master_tipe_lab`
 --
 
-INSERT INTO `master_satuan` (`id`, `nama_satuan`, `keterangan`) VALUES
-(3, 'gram', 'massa'),
-(5, 'buah', '-'),
-(6, 'liter', 'liquid'),
-(7, 'lembar', '-');
+INSERT INTO `master_tipe_lab` (`id`, `tipe_lab`, `keterangan`) VALUES
+('', 'Teknologi', '');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `master_satuan`
+-- Indeks untuk tabel `master_tipe_lab`
 --
-ALTER TABLE `master_satuan`
+ALTER TABLE `master_tipe_lab`
   ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT untuk tabel yang dibuang
---
-
---
--- AUTO_INCREMENT untuk tabel `master_satuan`
---
-ALTER TABLE `master_satuan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
