@@ -3,7 +3,7 @@
     
     <div class="row" id="form_pembelian">
       <div class="col-lg-12">
-        <div class="box box-primary">
+        <div class="box box-danger">
           <div class="box-header with-border">
             <h3 class="box-title">Master Instansi</h3>
 

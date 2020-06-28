@@ -41,7 +41,7 @@
   <link rel="stylesheet" href="<?=base_url();?>assets/plugins/pace/pace.min.css">
   <link href="<?=base_url();?>assets/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
   </head>
-  <body class="hold-transition skin-purple-light sidebar-mini fixed">
+  <body class="hold-transition skin-red sidebar-mini fixed">
   <style type="text/css">
   .not-active {
    pointer-events: none;
@@ -133,7 +133,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 1.0.0
         </div>
-        <strong>Copyright &copy; 2020 KHOLIQ BUDIMAN.</strong>
+        <strong>Copyright &copy; 2020 KELOMPOK 2 RPL.</strong>
       </footer>
 
       <!-- Control Sidebar -->

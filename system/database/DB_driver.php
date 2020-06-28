@@ -328,6 +328,7 @@ class CI_DB_driver {
 												$sql
 											)
 										);
+
 			}
 
 			return FALSE;

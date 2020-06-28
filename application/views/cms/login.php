@@ -52,7 +52,7 @@
 
           <div class="row">
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">LOGIN</button>
+              <button type="submit" class="btn btn-danger btn-block btn-flat">LOGIN</button>
             </div><!-- /.col -->
           </div>
         </form>
