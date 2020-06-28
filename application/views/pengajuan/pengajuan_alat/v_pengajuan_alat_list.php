@@ -1,6 +1,5 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
-    <div class="row" id="form_pembelian">
       <div class="col-lg-12">
         <div class="box box-danger">
           <div class="box-header with-border">
@@ -9,7 +8,7 @@
             <div class="box-tools pull-right">
             <?php
               $sesi = from_session('level');
-              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
+              if ($sesi == '1' || $sesi == '3' ) {
                 echo button('load_silent("pengajuan/pengajuan_alat/form/base","#modal")','Tambah Pengajuan Alat','btn btn-success');
               } else {
                 # code...
@@ -21,39 +20,47 @@
             <table width="100%" id="tableku" class="table table-striped">
               <thead>
                 <th>No</th>
-                <th>Kode</th>
+                <th>Periode</th>
                 <th>Nama Alat</th>
-                <th>Jenis</th>
-                <th>Keterangan</th>
+                <th>Merk</th>
+                <th>Seri</th>
+                <th>Estimasi Jumlah</th>
+                <th>Satuan</th>
+                <th>Harga</th>
+                <th>Nama Lab</th>
+                <th>Status</th>
                 <th>Act</th>
               </thead>
               <tbody>
-              <?php 
+        <?php 
           $i = 1;
           foreach($pengajuan_alat->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
-            <td align="center"><?=$row->kode?></td>
+            <td align="center"><?=$row->id?></td>
             <td align="center"><?=$row->nama_alat?></td>
-            <td align="center"><?=$row->jenis?></td>
-            <td align="center"><?=$row->keterangan?></td>
+            <td align="center"><?=$row->merk?></td>
+            <td align="center"><?=$row->seri?></td>
+            <td align="center"><?=$row->estimasi_jumlah?></td>
+            <td align="center"><?=$row->satuan?></td>
+            <td align="center">Rp. <?=number_format($row->harga)?></td>
+            <td align="center"><?=$row->nama_lab?></td>
+            <td align="center"><span class="badge bg-green">Ada</span></td>
             <td align="center">
             <?php
               $sesi = from_session('level');
-              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("pengajuan/pengajuan_alat/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
- 
+              if ($sesi == '1' || $sesi == '3') {
+                echo button('load_silent("pengajuan/pengajuan_alat/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fw fa-edit','data-toggle="tooltip" title="Edit"');
               } else {
                 # code...
               }
               ?>
-              <a href="<?= site_url('pengajuan/pengajuan_alat/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus pengajuan alat?')"><i class="fa fa-trash"></i></a>
-
+               <?php echo button('load_silent("pengajuan/pengajuan_alat/delete/'.$row->id.'","#content")','','btn btn-danger fa fw fa-trash','data-toggle="tooltip" title="Hapus"');?> 
             </td>
           </tr>
 
         <?php endforeach;?>
-                </tbody>
+        </tbody>
             </table>
           </div>
         </div>
