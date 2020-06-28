@@ -3,11 +3,12 @@
 <div class="box-body big">
     <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
         
+        
         <div class="form-group">
-            <label class="col-sm-4 control-label">Kode</label>
+            <label class="col-sm-4 control-label">Periode</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'kode','class'=>'form-control'));?>
-            <?php echo form_error('kode');?>
+            <input name="id" value="<?= $id; ?>" type="text" readonly="readonly" class="form-control">
+            <?php echo form_error('id');?>
             <span id="check_data"></span>
             </div>
         </div>
@@ -20,22 +21,52 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Jenis</label>
+            <label class="col-sm-4 control-label">Merk</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'jenis','class'=>'form-control'));?>
-            <?php echo form_error('jenis');?>
+            <?php echo form_input(array('name'=>'merk','class'=>'form-control'));?>
+            <?php echo form_error('merk');?>
             <span id="check_data"></span>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Keterangan</label>
+            <label class="col-sm-4 control-label">Seri</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'keterangan','class'=>'form-control'));?>
-            <?php echo form_error('keterangan');?>
+            <?php echo form_input(array('name'=>'seri','class'=>'form-control'));?>
+            <?php echo form_error('seri');?>
             <span id="check_data"></span>
             </div>
         </div>
-        
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Estimasi Jumlah</label>
+            <div class="col-sm-8">
+            <?php echo form_input(array('name'=>'estimasi_jumlah','class'=>'form-control'));?>
+            <?php echo form_error('estimasi_jumlah');?>
+            <span id="check_data"></span>
+            </div>
+        </div>
+        <div class="form-group">
+                <label class="col-sm-4 control-label">Satuan</label>
+                <div class="col-sm-8">
+                  <?php echo form_dropdown('satuan',$satuan,set_value('id'),'id="master_satuan" class="form-control select2"');?>
+                  <?php echo form_error('satuan', '<span class="error-span">', '</span>'); ?>
+                </div>
+            </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Harga</label>
+            <div class="col-sm-8">
+            <?php echo form_input(array('name'=>'harga','class'=>'form-control'));?>
+            <?php echo form_error('harga');?>
+            <span id="check_data"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Nama Lab</label>
+            <div class="col-sm-8">
+            <?php echo form_input(array('name'=>'nama_lab','class'=>'form-control'));?>
+            <?php echo form_error('nama_lab');?>
+            <span id="check_data"></span>
+            </div>
+        </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Simpan</label>
             <div class="col-sm-8 tutup">
