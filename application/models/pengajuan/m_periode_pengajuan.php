@@ -5,9 +5,9 @@ class M_periode_pengajuan extends CI_Model {
 
 	public function getData($value='')
 	{
+        $this->db->select('pp.*,sp.sumber_pendanaan, spj.status_pengajuan');
 		$this->db->join('master_sumber_pendanaan sp', 'pp.sumber_pendanaan = sp.id', 'left');
 		$this->db->join('status_pengajuan spj', 'pp.status_pengajuan = spj.id', 'left');
-		$this->db->select('pp.*,sp.sumber_pendanaan, spj.status_pengajuan');
 		
 		return $this->db->get('periode_pengajuan pp');
 	}
@@ -59,6 +59,3 @@ class M_periode_pengajuan extends CI_Model {
 
 
 }
-
-/* End of file m_nama_alat.php */
-/* Location: ./application/models/master/m_nama_alat.php */
