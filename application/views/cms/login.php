@@ -57,6 +57,7 @@
           </div>
         </form>
         <div class="text-center">
+<<<<<<< HEAD
                     
                     </div>
                     <div class="text-center">
@@ -64,6 +65,15 @@
                         <a class="small" href="<?php echo base_url('registrasi/index')?>"><h6>Daftar</h6></a>
                     </div>
                     </div>
+=======
+
+        </div>
+        <div class="text-center">
+            <h6>Belum Punya Akun?</h6>
+            <a class="small" href="<?php echo base_url('registrasi/index')?>"><h6>Daftar</h6></a>
+        </div>
+        </div>
+>>>>>>> 684758d61d9cba1b0378e5be93d42273c08b3ef1
 
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->
