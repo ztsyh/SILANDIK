@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Jun 2020 pada 10.10
+-- Waktu pembuatan: 29 Jun 2020 pada 10.09
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 5.6.36
 
@@ -25,35 +25,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengajuan_alat`
+-- Struktur dari tabel `master_kategori_no_induk`
 --
 
-CREATE TABLE `pengajuan_alat` (
+CREATE TABLE `master_kategori_no_induk` (
   `id` varchar(11) NOT NULL,
-  `nama_alat` varchar(50) NOT NULL,
-  `merk` varchar(50) NOT NULL,
-  `seri` varchar(50) NOT NULL,
-  `estimasi_jumlah` int(11) NOT NULL,
-  `satuan` varchar(50) NOT NULL,
-  `harga` int(50) NOT NULL,
-  `nama_lab` varchar(100) NOT NULL
+  `kategori_no_induk` varchar(11) NOT NULL,
+  `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pengajuan_alat`
+-- Dumping data untuk tabel `master_kategori_no_induk`
 --
 
-INSERT INTO `pengajuan_alat` (`id`, `nama_alat`, `merk`, `seri`, `estimasi_jumlah`, `satuan`, `harga`, `nama_lab`) VALUES
-('PA-20062800', 'Router', 'Netgear', 'AG5647J', 7, '5', 300000, 'Multimedia');
+INSERT INTO `master_kategori_no_induk` (`id`, `kategori_no_induk`, `keterangan`) VALUES
+('', 'NIM', 'nomor induk mahasiswa'),
+('2', 'NIP', 'nomor induk pegawai');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `pengajuan_alat`
+-- Indeks untuk tabel `master_kategori_no_induk`
 --
-ALTER TABLE `pengajuan_alat`
+ALTER TABLE `master_kategori_no_induk`
   ADD PRIMARY KEY (`id`);
 COMMIT;
 

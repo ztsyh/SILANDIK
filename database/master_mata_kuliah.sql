@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Jun 2020 pada 10.10
+-- Waktu pembuatan: 29 Jun 2020 pada 10.09
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 5.6.36
 
@@ -25,36 +25,45 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengajuan_alat`
+-- Struktur dari tabel `master_mata_kuliah`
 --
 
-CREATE TABLE `pengajuan_alat` (
-  `id` varchar(11) NOT NULL,
-  `nama_alat` varchar(50) NOT NULL,
-  `merk` varchar(50) NOT NULL,
-  `seri` varchar(50) NOT NULL,
-  `estimasi_jumlah` int(11) NOT NULL,
-  `satuan` varchar(50) NOT NULL,
-  `harga` int(50) NOT NULL,
-  `nama_lab` varchar(100) NOT NULL
+CREATE TABLE `master_mata_kuliah` (
+  `kode` int(11) NOT NULL,
+  `mata_kuliah` varchar(20) NOT NULL,
+  `dosen` varchar(25) NOT NULL,
+  `keterangan` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pengajuan_alat`
+-- Dumping data untuk tabel `master_mata_kuliah`
 --
 
-INSERT INTO `pengajuan_alat` (`id`, `nama_alat`, `merk`, `seri`, `estimasi_jumlah`, `satuan`, `harga`, `nama_lab`) VALUES
-('PA-20062800', 'Router', 'Netgear', 'AG5647J', 7, '5', 300000, 'Multimedia');
+INSERT INTO `master_mata_kuliah` (`kode`, `mata_kuliah`, `dosen`, `keterangan`) VALUES
+(912, 'BP', 'DIDU', 'Laki-Laki'),
+(4501, 'IMK', 'TINA', 'Perempuan'),
+(14045, 'KPDL', 'PAIJO', 'Laki-Laki'),
+(60001, 'IPA', 'OLEE', 'Perempuan');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `pengajuan_alat`
+-- Indeks untuk tabel `master_mata_kuliah`
 --
-ALTER TABLE `pengajuan_alat`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `master_mata_kuliah`
+  ADD PRIMARY KEY (`kode`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
+--
+
+--
+-- AUTO_INCREMENT untuk tabel `master_mata_kuliah`
+--
+ALTER TABLE `master_mata_kuliah`
+  MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60002;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

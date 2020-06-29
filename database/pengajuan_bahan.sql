@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Jun 2020 pada 18.49
+-- Waktu pembuatan: 29 Jun 2020 pada 10.10
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 5.6.36
 
@@ -44,7 +44,8 @@ CREATE TABLE `pengajuan_bahan` (
 --
 
 INSERT INTO `pengajuan_bahan` (`id`, `nama_bahan`, `merk`, `jenis`, `estimasi_jumlah`, `satuan`, `harga`, `nama_lab`) VALUES
-('PB-20062800', 'Merkuri', 'Jupiter', '-', 20, '6', 60000, 'Biologi');
+('PB-20062800', 'Merkuri', 'Jupiter', '-', 20, '6', 60000, 'Biologi'),
+('PB-20062900', 'Alkohol', 'sunlight', '80%', 15, '6', 70000, 'Kimia');
 
 --
 -- Indexes for dumped tables

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Jun 2020 pada 10.10
+-- Waktu pembuatan: 29 Jun 2020 pada 10.08
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 5.6.36
 
@@ -25,35 +25,34 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengajuan_alat`
+-- Struktur dari tabel `jatuh_tempo`
 --
 
-CREATE TABLE `pengajuan_alat` (
+CREATE TABLE `jatuh_tempo` (
   `id` varchar(11) NOT NULL,
-  `nama_alat` varchar(50) NOT NULL,
-  `merk` varchar(50) NOT NULL,
-  `seri` varchar(50) NOT NULL,
-  `estimasi_jumlah` int(11) NOT NULL,
-  `satuan` varchar(50) NOT NULL,
-  `harga` int(50) NOT NULL,
-  `nama_lab` varchar(100) NOT NULL
+  `nama_peminjam` varchar(50) NOT NULL,
+  `no_induk` varchar(11) NOT NULL,
+  `status_user` char(50) NOT NULL,
+  `kategori_peminjaman` varchar(50) NOT NULL,
+  `tanggal_kembali` date NOT NULL,
+  `status` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pengajuan_alat`
+-- Dumping data untuk tabel `jatuh_tempo`
 --
 
-INSERT INTO `pengajuan_alat` (`id`, `nama_alat`, `merk`, `seri`, `estimasi_jumlah`, `satuan`, `harga`, `nama_lab`) VALUES
-('PA-20062800', 'Router', 'Netgear', 'AG5647J', 7, '5', 300000, 'Multimedia');
+INSERT INTO `jatuh_tempo` (`id`, `nama_peminjam`, `no_induk`, `status_user`, `kategori_peminjaman`, `tanggal_kembali`, `status`) VALUES
+('PMJ-A-00002', 'Tiffany', '46124180000', 'Bebas Tanggungan', 'Praktikum', '2020-06-22', '');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `pengajuan_alat`
+-- Indeks untuk tabel `jatuh_tempo`
 --
-ALTER TABLE `pengajuan_alat`
+ALTER TABLE `jatuh_tempo`
   ADD PRIMARY KEY (`id`);
 COMMIT;
 

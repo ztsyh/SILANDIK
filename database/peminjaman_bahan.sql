@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Jun 2020 pada 16.14
+-- Waktu pembuatan: 29 Jun 2020 pada 10.10
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 5.6.36
 
@@ -44,7 +44,8 @@ CREATE TABLE `peminjaman_bahan` (
 --
 
 INSERT INTO `peminjaman_bahan` (`id_peminjaman`, `tanggal_pinjam`, `tanggal_kembali`, `jumlah`, `id_barang`, `status`, `nama_peminjam`, `kebutuhan`) VALUES
-('PINJAM01', '2020-05-23', '2020-06-14', 1, 'A001', 'Approved', 'Ejo', 'Praktikum');
+('PMJ-B-000001', '0000-00-00', '0000-00-00', 1, 'AS80K', 'Disetujui', 'Lintang', 'Praktikum'),
+('PMJ-B-000003', '2020-06-15', '2020-06-23', 1, 'TR60K', 'Disetujui', 'Callista', 'Praktikum');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

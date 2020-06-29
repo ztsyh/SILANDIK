@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2020 at 11:59 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 5.6.40
+-- Waktu pembuatan: 29 Jun 2020 pada 10.10
+-- Versi server: 10.1.32-MariaDB
+-- Versi PHP: 5.6.36
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `peminjaman_alat`
+-- Struktur dari tabel `peminjaman_alat`
 --
 
 CREATE TABLE `peminjaman_alat` (
@@ -40,12 +40,12 @@ CREATE TABLE `peminjaman_alat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `peminjaman_alat`
+-- Dumping data untuk tabel `peminjaman_alat`
 --
 
 INSERT INTO `peminjaman_alat` (`id_peminjaman`, `tanggal_pinjam`, `tanggal_kembali`, `jumlah`, `id_barang`, `status`, `nama_peminjam`, `kebutuhan`) VALUES
-('PINJAM001', '2020-05-21 00:00:00', '2020-05-27 00:00:00', '1', 'B0001', 'Approved', 'Siti', 'Praktikum'),
-('PINJAM002', '2020-05-22 00:00:00', '2020-05-28 00:00:00', '1', 'B002', 'Approved', 'Saito', 'Praktikum');
+('PMJ-A-0000001', '2020-06-16 00:00:00', '2020-06-22 00:00:00', '1', 'A001', 'Disetujui', 'Hafid', 'Praktikum'),
+('PMJ-A-000002', '2020-06-17 00:00:00', '2020-06-28 00:00:00', '1', 'R002T', 'Disetujui', 'Tiffany', 'Praktikum');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

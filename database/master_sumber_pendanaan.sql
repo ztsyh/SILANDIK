@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Jun 2020 pada 18.48
+-- Waktu pembuatan: 29 Jun 2020 pada 10.10
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 5.6.36
 
@@ -41,7 +41,8 @@ CREATE TABLE `master_sumber_pendanaan` (
 INSERT INTO `master_sumber_pendanaan` (`id`, `sumber_pendanaan`, `status`) VALUES
 (1, 'BOPTN', 'Ada'),
 (2, 'Hibah Dikti', 'Ada'),
-(3, 'fakultas', 'Ada');
+(3, 'fakultas', 'Ada'),
+(5, 'PNBP', 'Ada');
 
 --
 -- Indexes for dumped tables
@@ -61,7 +62,7 @@ ALTER TABLE `master_sumber_pendanaan`
 -- AUTO_INCREMENT untuk tabel `master_sumber_pendanaan`
 --
 ALTER TABLE `master_sumber_pendanaan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

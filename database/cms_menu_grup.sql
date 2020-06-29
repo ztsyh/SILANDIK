@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Jun 2020 pada 18.47
+-- Waktu pembuatan: 29 Jun 2020 pada 10.08
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 5.6.36
 
@@ -44,7 +44,8 @@ INSERT INTO `cms_menu_grup` (`id_grup_menu`, `nama_grup`, `icon`) VALUES
 (2, 'Master', 'fa fa-fw fa-archive'),
 (101, 'Dashboard', 'fa fa-dashboard'),
 (4, 'Pengajuan', 'fa fa-fw fa-level-up'),
-(5, 'Kelola', 'fa fa-gears');
+(5, 'Kelola', 'fa fa-gears'),
+(6, 'Peminjaman', 'fa fa-fw fa-level-down');
 
 --
 -- Indexes for dumped tables
