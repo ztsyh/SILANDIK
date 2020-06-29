@@ -13,16 +13,6 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Status</label>
-            <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'status','class'=>'form-control'));?>
-            <?php echo form_error('status');?>
-            <span id="check_data"></span>
-            </div>
-        </div>
-        </div>
-
-        <div class="form-group">
             <label class="col-sm-4 control-label">Simpan</label>
             <div class="col-sm-8 tutup">
             <?php echo button('send_form(document.faddmenugrup,"master/sumber_pendanaan/show_addForm/","#divsubcontent")','Simpan','btn btn-success')."";?>

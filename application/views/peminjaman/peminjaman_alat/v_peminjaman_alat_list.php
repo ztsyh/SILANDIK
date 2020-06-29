@@ -2,7 +2,7 @@
 
     <div class="row" id="form_pembelian">
       <div class="col-lg-12">
-        <div class="box box-primary">
+        <div class="box box-danger">
           <div class="box-header with-border">
             <h3 class="box-title">Peminjaman Alat</h3>
 
@@ -39,8 +39,8 @@
             <td align="center"><?=$i++?></td>
             <td align="center"><?=$row->id_peminjaman?></td>
             <td align="center"><?=$row->nama_peminjam?></td>
-            <td align="center"><?=$row->tanggal_pinjam?></td>
-            <td align="center"><?=$row->tanggal_kembali?></td>
+            <td align="center"><?=date('j F Y',strtotime($row->tanggal_pinjam))?></td>
+            <td align="center"><?=date('j F Y',strtotime($row->tanggal_kembali))?></td>
             <td align="center"><?=$row->jumlah?></td>
             <td align="center"><?=$row->id_barang?></td>
             <td align="center"><?=$row->status?></td>
@@ -53,6 +53,7 @@
               } else {
                 # code...
               }
+              echo button('load_silent("peminjaman/peminjaman_alat/delete/'.$row->id_peminjaman.'","#content")','','btn btn-danger fa fw fa-trash','data-toggle="tooltip" title="Hapus"');
               ?>
             </td>
           </tr>

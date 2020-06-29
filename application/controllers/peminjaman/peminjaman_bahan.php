@@ -95,6 +95,16 @@ class Peminjaman_bahan extends CI_Controller {
 			$this->fungsi->catat($datapost,"Mengedit Peminjaman dengan data sbb:",true);
 		}
 	}
+	public function delete($id)
+    {
+        
+		// if($id == '' || !is_numeric($id)) die;
+		$this->m_peminjaman_bahan->deleteData($id);
+		$this->fungsi->run_js('load_silent("peminjaman/peminjaman_bahan","#content")');
+		$this->fungsi->message_box("Data Peminjaman Berhasil dihapus...","notice");
+		$this->fungsi->catat("Menghapus laporan dengan id ".$id);
+    
+	}
 }
 
 /* End of file peminjaman.php */

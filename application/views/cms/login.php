@@ -52,10 +52,18 @@
 
           <div class="row">
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-danger btn-block btn-flat">LOGIN</button>
+              <button type="submit" class="btn btn-primary btn-block btn-flat">LOGIN</button>
             </div><!-- /.col -->
           </div>
         </form>
+        <div class="text-center">
+                    
+                    </div>
+                    <div class="text-center">
+                        <h6>Belum Punya Akun?</h6>
+                        <a class="small" href="<?php echo base_url('registrasi/index')?>"><h6>Daftar</h6></a>
+                    </div>
+                    </div>
 
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->

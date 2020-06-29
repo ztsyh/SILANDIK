@@ -6,14 +6,12 @@
 <div class="box-body big">
     <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
         
-     
-        
         <div class="form-group">
-            <label class="col-sm-4 control-label">Nama Satuan</label>
+            <label class="col-sm-4 control-label">Kategori Nomor Induk</label>
             <div class="col-sm-8">
             <?php echo form_hidden('id',$row->id); ?>
-            <?php echo form_input(array('name'=>'nama_satuan','value'=>$row->nama_satuan,'class'=>'form-control'));?>
-            <?php echo form_error('nama_satuan');?>
+            <?php echo form_input(array('name'=>'kategori_no_induk','value'=>$row->kategori_no_induk,'class'=>'form-control'));?>
+            <?php echo form_error('kategori_no_induk');?>
             </div>
         </div>
         <div class="form-group">
@@ -27,7 +25,7 @@
             <label class="col-sm-4 control-label">Simpan</label>
             <div class="col-sm-8 tutup">
             <?php
-            echo button('send_form(document.faddmenugrup,"peminjaman/cek_status_peminjaman/show_editForm/","#divsubcontent")','Simpan','btn btn-success')." ";
+            echo button('send_form(document.faddmenugrup,"master/kategori_no_induk/show_editForm/","#divsubcontent")','Simpan','btn btn-success')." ";
             ?>
             </div>
         </div>
