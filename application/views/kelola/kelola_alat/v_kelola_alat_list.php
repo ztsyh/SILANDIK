@@ -9,7 +9,7 @@
             <div class="box-tools pull-right">
             <?php
               $sesi = from_session('level');
-              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
+              if ($sesi == '1' || $sesi == '3' || $sesi == '4') {
                 echo button('load_silent("kelola/kelola_alat/form/base","#modal")','Add Kelola Alat','btn btn-success');
               } else {
                 # code...

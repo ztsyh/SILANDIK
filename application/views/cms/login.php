@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+</head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php echo $this->config->item('title')?></title>
@@ -52,20 +52,11 @@
 
           <div class="row">
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">LOGIN</button>
+              <button type="submit" class="btn btn-danger btn-block btn-flat">LOGIN</button>
             </div><!-- /.col -->
           </div>
         </form>
         <div class="text-center">
-<<<<<<< HEAD
-                    
-                    </div>
-                    <div class="text-center">
-                        <h6>Belum Punya Akun?</h6>
-                        <a class="small" href="<?php echo base_url('registrasi/index')?>"><h6>Daftar</h6></a>
-                    </div>
-                    </div>
-=======
 
         </div>
         <div class="text-center">
@@ -73,7 +64,6 @@
             <a class="small" href="<?php echo base_url('registrasi/index')?>"><h6>Daftar</h6></a>
         </div>
         </div>
->>>>>>> 684758d61d9cba1b0378e5be93d42273c08b3ef1
 
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->

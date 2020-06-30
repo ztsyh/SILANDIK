@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-danger">
 
     <div class="container">
 
@@ -51,7 +51,7 @@
                         <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Ulangi Password" name="password_2">
                     </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-user btn-block">DAFTAR</button>
+                    <button type="submit" class="btn btn-danger btn-user btn-block">DAFTAR</button>
                     <hr>
 
                 </form>

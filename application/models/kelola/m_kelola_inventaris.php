@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_inven extends CI_Model {
+class M_kelola_inventaris extends CI_Model {
 
     //select->read
 	public function getData($value='')
