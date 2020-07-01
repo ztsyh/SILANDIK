@@ -53,7 +53,7 @@ class Nama_alat extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('kode','nama_alat','keterangan','id_status'));
+			$datapost = get_post_data(array('nama_alat','keterangan'));
 			$this->m_nama_alat->insertData($datapost);
 			$this->fungsi->run_js('load_silent("master/nama_alat","#content")');
 			$this->fungsi->message_box("Data Master Nama Alat sukses disimpan...","success");
@@ -88,11 +88,11 @@ class Nama_alat extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','kode','nama_alat','keterangan','id_status'));
+			$datapost = get_post_data(array('nama_alat','keterangan'));
 			$this->m_nama_alat->updateData($datapost);
 			$this->fungsi->run_js('load_silent("master/nama_alat","#content")');
 			$this->fungsi->message_box("Data Master Nama Alat sukses diperbarui...","success");
-			$this->fungsi->catat($datapost,"Mengedit Master nama_alat dengan data sbb:",true);
+			$this->fungsi->catat($datapost,"Mengedit Master Nama Alat dengan data sbb:",true);
 		}
 	}
 
@@ -103,6 +103,3 @@ class Nama_alat extends CI_Controller {
 		redirect('admin');
 	}
 }
-
-/* End of file nama_alat.php */
-/* Location: ./application/controllers/master/nama_alat.php */

@@ -10,7 +10,7 @@
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '4') {
-                echo button('load_silent("master/nama_alat/form/base","#modal")','Add New Nama Alat','btn btn-success');
+                echo button('load_silent("master/nama_alat/form/base","#modal")','Tambah Nama Alat','btn btn-success');
               } else {
                 # code...
               }
@@ -21,7 +21,6 @@
             <table width="100%" id="tableku" class="table table-striped">
               <thead>
                 <th>No</th>
-                <th>Kode</th>
                 <th>Nama Alat</th>
                 <th>Keterangan</th>
                 <th>Act</th>
@@ -32,7 +31,6 @@
           foreach($nama_alat->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
-            <td align="center"><?=$row->kode?></td>
             <td align="center"><?=$row->nama_alat?></td>
             <td align="center"><?=$row->keterangan?></td>
             <td align="center">
