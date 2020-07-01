@@ -4,13 +4,13 @@
       <div class="col-lg-12">
         <div class="box box-danger">
           <div class="box-header with-border">
-            <h3 class="box-title">Lokasi Penyimpanaan Bahan</h3>
+            <h3 class="box-title">Kelola Lokasi Penyimpanaan Lab</h3>
 
             <div class="box-tools pull-right">
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '4') {
-                echo button('load_silent("kelola/lokasi_penyimpanan_bahan/form/base","#modal")','Tambah Data Lokasi','btn btn-success');
+                echo button('load_silent("kelola/lokasi_penyimpanan/form/base","#modal")','Tambah Data Lokasi','btn btn-success');
               } else {
                 # code...
               }
@@ -21,32 +21,28 @@
             <table width="100%" id="tableku" class="table table-striped">
               <thead>
                 <th>No</th>
-                <th>ID Penyimpanan</th>
-                <th>Kode Bahan</th>
-                <th>Kode Rak</th>
-                <th>Urutan</th>
+                <th>Nama Lokasi Penyimpanan</th>
+                <th>Status</th>
                 <th>Act</th>
               </thead>
               <tbody>
               <?php 
           $i = 1;
-          foreach($lokasi_penyimpanan_bahan->result() as $row): ?>
+          foreach($lokasi_penyimpanan->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
-            <td align="center"><?=$row->id?></td>
-            <td align="center"><?=$row->kode_bahan?></td>
-            <td align="center"><?=$row->kode_rak?></td>
-            <td align="center"><?=$row->urutan?></td>
+            <td align="center"><?=$row->nama_lokasi_penyimpanan?></td>
+            <td align="center"><span class="badge bg-green">Ada</span></td>
             <td align="center">
             <?php
               $sesi = from_session('level');
-              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("kelola/lokasi_penyimpanan_bahan/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
+              if ($sesi == '1' || $sesi == '4') {
+                echo button('load_silent("kelola/lokasi_penyimpanan/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
             } else {
                 # code...
               }
               ?>
-              <a href="<?= site_url('kelola/lokasi_penyimpanan_bahan/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus data lokasi?')"><i class="fa fa-trash"></i></a>
+              <a href="<?= site_url('kelola/lokasi_penyimpanan/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus data lokasi?')"><i class="fa fa-trash"></i></a>
 
             </td>
           </tr>
