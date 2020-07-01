@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Jul 2020 pada 16.26
+-- Waktu pembuatan: 01 Jul 2020 pada 23.58
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 5.6.36
 
@@ -40,11 +40,14 @@ CREATE TABLE `cms_captcha` (
 --
 
 INSERT INTO `cms_captcha` (`captcha_id`, `captcha_time`, `ip_address`, `word`) VALUES
+(3414, 1593639060, '::1', '228755'),
+(3413, 1593639051, '::1', '185790'),
 (3314, NULL, '::1', NULL),
-(3398, 1593608780, '::1', '812790'),
-(3397, 1593608771, '::1', '116016'),
-(3400, 1593612894, '::1', '620663'),
-(3399, 1593612885, '::1', '085871');
+(3412, 1593634116, '::1', '488819'),
+(3411, 1593634092, '::1', '071798'),
+(3410, 1593633905, '::1', '155339'),
+(3409, 1593633856, '::1', '392841'),
+(3415, 1593640331, '::1', '585888');
 
 -- --------------------------------------------------------
 
@@ -303,7 +306,22 @@ INSERT INTO `cms_log` (`id_log`, `ip`, `mac_address`, `time`, `kegiatan`, `user`
 (234, '::1', '', '2020-07-01 20:06:19', 'Login  by Tiffany', 'tiffany'),
 (235, '::1', '', '2020-07-01 20:10:09', 'Menambah Kelola Seri Alat dengan data sbb:<br />\r\n                    <ul><li><b>kategori</b> dengan value <b>Praktikum</b></li><li><b>merk</b> dengan value <b>Sanco</b></li><li><b>seri</b> dengan value <b>A201</b></li><li><b>sop_pengoperasian</b> dengan value <b>-</b></li><li><b>sop_pemeliharaan</b> dengan value <b>-</b></li><li><b>sop_pemeriksaan</b> dengan value <b>-</b></li><li><b>sop_kalibrasi</b> dengan value <b>-</b></li><li><b>sop_uji_fungsi</b> dengan value <b>-</b></li><li><b>stok</b> dengan value <b>2</b></li><li><b>stok_minimal</b> dengan value <b>2</b></li></ul>', 'tiffany'),
 (236, '::1', '', '2020-07-01 20:12:02', 'Mengedit Kelola Seri Alat dengan data sbb:<br />\r\n                    <ul><li><b>kategori</b> dengan value <b>Praktikum</b></li><li><b>merk</b> dengan value <b>Sanco</b></li><li><b>seri</b> dengan value <b>A201</b></li><li><b>sop_pengoperasian</b> dengan value <b>-</b></li><li><b>sop_pemeliharaan</b> dengan value <b>-</b></li><li><b>sop_pemeriksaan</b> dengan value <b>-</b></li><li><b>sop_kalibrasi</b> dengan value <b>-</b></li><li><b>sop_uji_fungsi</b> dengan value <b>-</b></li><li><b>stok</b> dengan value <b>3</b></li><li><b>stok_minimal</b> dengan value <b>2</b></li></ul>', 'tiffany'),
-(237, '::1', '', '2020-07-01 21:14:54', 'Login  by Tiffany', 'tiffany');
+(237, '::1', '', '2020-07-01 21:14:54', 'Login  by Tiffany', 'tiffany'),
+(238, '::1', '', '2020-07-01 23:30:55', 'Logout SILANDIK by ', 'Tamu'),
+(239, '::1', '', '2020-07-01 23:31:32', 'Login  by Tiffany', 'tiffany'),
+(240, '::1', '', '2020-07-02 01:47:45', 'Login  by Tiffany', 'tiffany'),
+(241, '::1', '', '2020-07-02 01:59:09', 'Logout SILANDIK by Tiffany', 'tiffany'),
+(242, '::1', '', '2020-07-02 01:59:23', 'Login  by Tiffany', 'tiffany'),
+(243, '::1', '', '2020-07-02 02:00:34', 'Logout SILANDIK by Tiffany', 'tiffany'),
+(244, '::1', '', '2020-07-02 02:01:01', 'Login  by Tiffany', 'tiffany'),
+(245, '::1', '', '2020-07-02 02:36:54', 'Menambah Pengajuan Alat dengan data sbb:<br />\r\n                    <ul><li><b>id</b> dengan value <b>PA-20070200000</b></li><li><b>nama_alat</b> dengan value <b>Router</b></li><li><b>merk</b> dengan value <b>Kwarta</b></li><li><b>seri</b> dengan value <b>B089G</b></li><li><b>estimasi_jumlah</b> dengan value <b>5</b></li><li><b>satuan</b> dengan value <b>pcs</b></li><li><b>harga</b> dengan value <b>5000</b></li><li><b>nama_lab</b> dengan value <b>Multimedia</b></li></ul>', 'tiffany'),
+(246, '::1', '', '2020-07-02 03:04:13', 'Logout SILANDIK by Tiffany', 'tiffany'),
+(247, '::1', '', '2020-07-02 03:05:05', 'Login  by Lestari', 'lestari'),
+(248, '::1', '', '2020-07-02 03:08:09', 'Logout SILANDIK by Lestari', 'lestari'),
+(249, '::1', '', '2020-07-02 03:08:36', 'Login  by Lestari', 'lestari'),
+(250, '::1', '', '2020-07-02 04:30:45', 'Logout SILANDIK by Lestari', 'lestari'),
+(251, '::1', '', '2020-07-02 04:31:00', 'Login  by Tiffany', 'tiffany'),
+(252, '::1', '', '2020-07-02 04:52:07', 'Logout SILANDIK by Tiffany', 'tiffany');
 
 -- --------------------------------------------------------
 
@@ -346,16 +364,16 @@ INSERT INTO `cms_menu` (`id`, `alias`, `nama`, `deskripsi`, `allowed_level`, `ur
 (139, 'kategori_bahan', 'Kategori Bahan', '', '+1+2+', 'master/kategori_bahan', 1, 12, 2),
 (138, 'pengajuan_alat', 'Pengajuan Alat', '-', '+1+3+4+5+7+', 'pengajuan/pengajuan_alat', 1, 10, 4),
 (140, 'pengajuan_bahan', 'Pengajuan Bahan', '-', '+1+3+4+5+7+', 'pengajuan/pengajuan_bahan', 1, 13, 4),
-(152, 'kelola_alat', 'Kelola Alat', '', '+1+2+', 'kelola/kelola_alat', 1, 1, 5),
-(143, 'lokasi_penyimpanan', 'Lokasi Penyimpanan', '', '+1+4+', 'kelola/lokasi_penyimpanan', 1, 15, 5),
+(152, 'kelola_alat', 'Kelola Alat', '', '+1+2+4+', 'kelola/kelola_alat', 1, 2, 5),
+(143, 'lokasi_penyimpanan', 'Lokasi Penyimpanan', '', '+1+4+', 'kelola/lokasi_penyimpanan', 1, 1, 5),
 (144, 'periode_pengajuan', 'Periode Pengajuan', '', '+1+3+', 'pengajuan/periode_pengajuan', 1, 16, 4),
 (145, 'sumber_pendanaan', 'Sumber Pendanaan', '', '+1+3+', 'master/sumber_pendanaan', 1, 12, 2),
 (146, 'peminjaman_alat', 'Peminjaman Alat', '', '+1+4+5+6+7+8+', 'peminjaman/peminjaman_alat', 1, 17, 6),
 (147, 'peminjaman_bahan', 'Peminjaman Bahan', '', '+1+4+5+6+7+8+', 'peminjaman/peminjaman_bahan', 1, 18, 6),
 (148, 'jatuh_tempo', 'Jatuh Tempo', '', '+1+4+', 'kelola/jatuh_tempo', 1, 15, 5),
-(150, 'kelola_inventaris', 'Inventaris', '', '+1+3+4+', 'kelola/kelola_inventaris', 1, 14, 5),
+(150, 'kelola_inventaris', 'Inventaris', '', '+1+3+4+', 'kelola/kelola_inventaris', 1, 4, 5),
 (151, 'kelola_user', 'Kelola User', '', '+1+2+', 'kelola/kelola_user', 1, 1, 5),
-(153, 'kelola_seri', 'Kelola Seri', '', '+1+4+', 'kelola/kelola_seri', 1, 1, 5);
+(153, 'kelola_seri', 'Kelola Seri', '', '+1+4+', 'kelola/kelola_seri', 1, 3, 5);
 
 -- --------------------------------------------------------
 
@@ -427,10 +445,10 @@ CREATE TABLE `cms_user` (
 --
 
 INSERT INTO `cms_user` (`id`, `nama`, `jenis_kelamin`, `gambar`, `email`, `username`, `password`, `level`, `bagian`, `no_hp`, `alamat`, `last_login`) VALUES
-(1, 'Tiffany', '', 'files/2020/06/2da277a466b12a2f364607b733f225b9.jpg', '', 'tiffany', '*FCC67C9225D63398152A826201B41AA6CF02555C', 1, 1, '', '', '2020-07-01 21:14:53'),
+(1, 'Tiffany', '', 'files/2020/06/2da277a466b12a2f364607b733f225b9.jpg', '', 'tiffany', '*FCC67C9225D63398152A826201B41AA6CF02555C', 1, 1, '', '', '2020-07-02 04:31:00'),
 (2, 'Ovilia', '2', 'files/2020/06/e5b937305d1800c9ddb8a82aae58832b.jpg', 'ovilia@gmail.com', 'ovilia', '*6D14F0ABED06C7BAA59C68861FF524DD546135D8', 2, 0, '08993536787', '-', '2020-06-30 15:47:41'),
 (3, 'Dwi', '', '', '', 'dwi', '*8A17C7CA5005815A9161F0F7DE4F3078A48A0106', 3, 1, '', '', '2020-06-30 15:48:39'),
-(7, 'Lestari', '', '', '', 'lestari', '*E3323137C5026320091A6A276A92A499643BB3B6', 4, 1, '', '', '2020-06-30 15:49:37'),
+(7, 'Lestari', '', '', '', 'lestari', '*E3323137C5026320091A6A276A92A499643BB3B6', 4, 1, '', '', '2020-07-02 03:08:36'),
 (8, 'Ningsih', '', '', '', 'ningsih', '*280DFB32BA14A7625738FDACF5A3625225C57D5B', 5, 1, '', '', '2017-03-01 08:26:51'),
 (9, 'Arum', '', '', '', 'arum', '*B522E41F11F9A056BCB24DA8970F9D1CD4E7AF8F', 6, 1, '', '', '2017-03-02 14:28:19'),
 (10, 'Sari', '', '', '', 'sari', '*FF115CE1A6D1060867A270672454387689AC2B97', 7, 1, '', '', '2020-06-30 11:49:04'),
@@ -512,18 +530,18 @@ CREATE TABLE `kelola_inventaris` (
   `sumber_pendanaan` varchar(50) NOT NULL,
   `harga` varchar(20) NOT NULL,
   `tanggal_pembelian` date NOT NULL,
-  `kondisi` varchar(50) NOT NULL
+  `kondisi` varchar(50) NOT NULL,
+  `status` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `kelola_inventaris`
 --
 
-INSERT INTO `kelola_inventaris` (`id`, `kode_inventaris`, `kode_simak`, `lokasi_penyimpanan`, `sumber_pendanaan`, `harga`, `tanggal_pembelian`, `kondisi`) VALUES
-(1, 'MK02', '12345', 'almari1', 'fakultas', '300000', '2020-07-01', 'Baik'),
-(2, 'MK03', '12345', 'meja1', 'PNBP', '400000', '2020-06-17', 'Rusak'),
-(3, 'MK01', '12345', 'etalase1', 'fakultas', '1000000', '2020-06-10', 'Baik'),
-(4, 'MK04', '67890', 'almari1', 'fakultas', '230000', '2020-06-03', 'Rusak');
+INSERT INTO `kelola_inventaris` (`id`, `kode_inventaris`, `kode_simak`, `lokasi_penyimpanan`, `sumber_pendanaan`, `harga`, `tanggal_pembelian`, `kondisi`, `status`) VALUES
+(1, 'MK02', '12345', 'almari1', 'fakultas', '300000', '2020-07-01', 'Baik', ''),
+(2, 'MK03', '12345', 'meja1', 'PNBP', '400000', '2020-06-17', 'Rusak', ''),
+(3, 'MK01', '12345', 'etalase1', 'fakultas', '1000000', '2020-06-10', 'Baik', '');
 
 -- --------------------------------------------------------
 
@@ -959,7 +977,8 @@ CREATE TABLE `pengajuan_alat` (
 --
 
 INSERT INTO `pengajuan_alat` (`id`, `nama_alat`, `merk`, `seri`, `estimasi_jumlah`, `satuan`, `harga`, `nama_lab`) VALUES
-('PA-20062800', 'Router', 'Netgear', 'AG5647J', 7, 'pcs', 300000, 'Multimedia');
+('PA-20062800', 'Router', 'Netgear', 'AG5647J', 7, 'pcs', 300000, 'Multimedia'),
+('PA-20070200', 'Router', 'Kwarta', 'B089G', 5, 'pcs', 5000, 'Multimedia');
 
 -- --------------------------------------------------------
 
@@ -1227,13 +1246,13 @@ ALTER TABLE `status_pengajuan`
 -- AUTO_INCREMENT untuk tabel `cms_captcha`
 --
 ALTER TABLE `cms_captcha`
-  MODIFY `captcha_id` bigint(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3401;
+  MODIFY `captcha_id` bigint(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3416;
 
 --
 -- AUTO_INCREMENT untuk tabel `cms_log`
 --
 ALTER TABLE `cms_log`
-  MODIFY `id_log` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=238;
+  MODIFY `id_log` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=253;
 
 --
 -- AUTO_INCREMENT untuk tabel `cms_menu`
