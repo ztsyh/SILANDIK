@@ -52,6 +52,8 @@
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
                 echo button('load_silent("kelola/kelola_seri/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
+              ?><a href="<?= site_url('kelola/kelola_inventaris') ?>" class="btn btn-warning"><i class="fa fa-search"></i></a>
+              <?php
               } else {
                 # code...
               }

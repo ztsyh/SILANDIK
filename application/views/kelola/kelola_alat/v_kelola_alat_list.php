@@ -38,10 +38,13 @@
             <td align="center">
             <?php
               $sesi = from_session('level');
-              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
+              if ($sesi == '1' || $sesi == '2' || $sesi == '4') {
                 echo button('load_silent("kelola/kelola_alat/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
+            ?><a href="<?= site_url('kelola/kelola_seri') ?>" class="btn btn-warning"><i class="fa fa-search"></i></a>
+              <?php
               } else {
-                # code...
+                # code..
+                
               }
               ?>
               <a href="<?= site_url('kelola/kelola_alat/delete/'.$row->id) ?>" class="btn btn-danger"

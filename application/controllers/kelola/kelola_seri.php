@@ -62,7 +62,7 @@ class Kelola_seri extends CI_Controller {
 			$this->fungsi->catat($datapost,"Menambah Kelola Seri Alat dengan data sbb:",true);
 		}
 	}
-
+		
 	public function show_editForm($id='')
 	{
 		$this->fungsi->check_previleges('kelola_seri');

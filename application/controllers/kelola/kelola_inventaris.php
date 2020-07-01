@@ -99,7 +99,7 @@ class kelola_inventaris extends CI_Controller {
 		public function delete()
 	{
 		$id = $this->uri->segment(4);
-		$this->m_inven->deleteData($id);
+		$this->m_kelola_inventaris->deleteData($id);
 		redirect('admin');
 	}
 }

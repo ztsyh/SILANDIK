@@ -23,8 +23,8 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Lokasi</label>
             <div class="col-sm-8">
-            <?php echo form_dropdown('lokasi',$lokasi,set_value('id'),'id="lokasi_penyimpanan" class="form-control select2"');?>
-            <?php echo form_error('lokasi', '<span class="error-span">', '</span>'); ?>
+            <?php echo form_dropdown('lokasi_penyimpanan',$lokasi_penyimpanan,set_value('id'),'id="lokasi_penyimpanan" class="form-control select2"');?>
+            <?php echo form_error('lokasi_penyimpanan', '<span class="error-span">', '</span>'); ?>
             </div>
         </div>
         <div class="form-group">
