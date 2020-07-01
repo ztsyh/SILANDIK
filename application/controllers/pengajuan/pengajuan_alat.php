@@ -14,7 +14,7 @@ class Pengajuan_alat extends CI_Controller {
 	{
 		$this->fungsi->check_previleges('pengajuan_alat');
 		$data['pengajuan_alat'] = $this->m_pengajuan_alat->getData();
-		$data['satuan']  = get_options($this->db->query('select id, nama_satuan from master_satuan'),true);
+		$data['satuan']  = get_options($this->db->query('select nama_satuan, nama_satuan from master_satuan'),true);
 		$this->load->view('pengajuan/pengajuan_alat/v_pengajuan_alat_list',$data);
     }
     public function form($param='')
@@ -55,7 +55,7 @@ class Pengajuan_alat extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['status']='';
-			$data['satuan']  = get_options($this->db->query('select id, nama_satuan from master_satuan'),true);
+			$data['satuan']  = get_options($this->db->query('select nama_satuan, nama_satuan from master_satuan'),true);
 		
 			// Mendapatkan dan men-generate id periode
             $kode = 'PA-' . date('ymd');
@@ -100,7 +100,7 @@ class Pengajuan_alat extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['edit'] = $this->db->get_where('pengajuan_alat',array('id'=>$id));
-			$data['satuan']  = get_options($this->db->query('select id, nama_satuan from master_satuan'),true);
+			$data['satuan']  = get_options($this->db->query('select nama_satuan, nama_satuan from master_satuan'),true);
 			$this->load->view('pengajuan/pengajuan_alat/v_pengajuan_alat_edit',$data);
 		}
 		else

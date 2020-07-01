@@ -7,7 +7,6 @@ class M_pengajuan_alat extends CI_Model {
 	{
         $this->db->select('pa.*,s.nama_satuan');
 		$this->db->join('master_satuan s', 'pa.satuan = s.nama_satuan', 'left');
-		
 		return $this->db->get('pengajuan_alat pa');
 	}
 

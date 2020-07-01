@@ -4,13 +4,13 @@
       <div class="col-lg-12">
         <div class="box box-danger">
           <div class="box-header with-border">
-            <h3 class="box-title">Inventaris Alat dan Bahan</h3>
+            <h3 class="box-title">Kelola Inventaris</h3>
 
             <div class="box-tools pull-right">
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '3' || $sesi == '4') {
-                echo button('load_silent("kelola/kelola_inventaris/form/base","#modal")','Tambahkan Inventaris Baru','btn btn-success');
+                echo button('load_silent("kelola/kelola_inventaris/form/base","#modal")','Tambahkan Inventaris','btn btn-success');
               } else {
                 # code...
               }
@@ -21,10 +21,14 @@
             <table width="100%" id="tableku" class="table table-striped">
               <thead>
                 <th>No</th>
-                <th>Kode</th>
-                <th>Nama Alat atau Bahan</th>
-                <th>Tanggal</th>
-                <th>Keterangan</th>
+                <th>Kode Inventaris</th>
+                <th>Kode Simak</th>
+                <th>Lokasi</th>
+                <th>Pendanaan</th>
+                <th>Harga</th>
+                <th>Tanggal Pembelian</th>
+                <th>Kondisi</th>
+                <th>Status</th>
                 <th>Act</th>
               </thead>
               <tbody>
@@ -33,10 +37,14 @@
           foreach($kelola_inventaris->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
-            <td align="center"><?=$row->kode?></td>
-            <td align="center"><?=$row->alat_bahan?></td>
-            <td align="center"><?=$row->tanggal?></td>
-            <td align="center"><span class="badge bg-green"><?=$row->keterangan?></td>
+            <td align="center"><?=$row->kode_inventaris?></td>
+            <td align="center"><?=$row->kode_simak?></td>
+            <td align="center"><?=$row->lokasi_penyimpanan?></td>
+            <td align="center"><?=$row->sumber_pendanaan?></td>
+            <td align="center">Rp. <?=number_format($row->harga)?></td>
+            <td align="center"><?=date('j F Y',strtotime($row->tanggal_pembelian))?></td>
+            <td align="center"><span class="badge badge-success"><?=$row->kondisi?></span></td>
+            <td align="center"><span class="badge bg-green"><?=$row->status?></td>
             <td align="center">
             <?php
               $sesi = from_session('level');

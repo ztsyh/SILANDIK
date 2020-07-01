@@ -14,7 +14,7 @@ class Pengajuan_bahan extends CI_Controller {
 	{
 		$this->fungsi->check_previleges('pengajuan_bahan');
 		$data['pengajuan_bahan'] = $this->m_pengajuan_bahan->getData();
-		$data['satuan']  = get_options($this->db->query('select id, nama_satuan from master_satuan'),true);
+		$data['satuan']  = get_options($this->db->query('select nama_satuan, nama_satuan  from master_satuan'),true);
 		$this->load->view('pengajuan/pengajuan_bahan/v_pengajuan_bahan_list',$data);
     }
     public function form($param='')
@@ -55,7 +55,7 @@ class Pengajuan_bahan extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['status']='';
-			$data['satuan']  = get_options($this->db->query('select id, nama_satuan from master_satuan'),true);
+			$data['satuan']  = get_options($this->db->query('select nama_satuan, nama_satuan from master_satuan'),true);
 		
 			// Mendapatkan dan men-generate id periode
             $kode = 'PB-' . date('ymd');
@@ -100,7 +100,7 @@ class Pengajuan_bahan extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['edit'] = $this->db->get_where('pengajuan_bahan',array('id'=>$id));
-			$data['satuan']  = get_options($this->db->query('select id, nama_satuan from master_satuan'),true);
+			$data['satuan']  = get_options($this->db->query('select nama_satuan, nama_satuan from master_satuan'),true);
 			$this->load->view('pengajuan/pengajuan_bahan/v_pengajuan_bahan_edit',$data);
 		}
 		else

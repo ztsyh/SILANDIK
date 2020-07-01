@@ -6,8 +6,8 @@ class M_kelola_inventaris extends CI_Model {
     //select->read
 	public function getData($value='')
 	{
-		$this->db->from('kelola_inventaris mb');
-		$this->db->order_by('mb.id', 'desc');
+		$this->db->from('kelola_inventaris ki');
+		$this->db->order_by('ki.id', 'desc');
 		return $this->db->get();
 	}
 
