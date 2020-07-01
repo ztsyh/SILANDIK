@@ -583,3 +583,6 @@ class kelola_user extends CI_Controller {
 	}
 
 }
+
+/* End of file user.php */
+/* Location: ./application/controllers/cms/user.php */

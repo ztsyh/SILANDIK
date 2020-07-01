@@ -7,7 +7,7 @@
                 <h3 class="box-title">From Add User</h3>
 
                 <div class="box-tools pull-right">
-                  <?php echo button('load_silent("cms/user/formadd/","#content")','Reload Page','btn btn-danger','data-toggle="tooltip" title="Reload"');?> 
+                  <?php echo button('load_silent("kelola/kelola_user/formadd/","#content")','Reload Page','btn btn-danger','data-toggle="tooltip" title="Reload"');?> 
                 </div>
             </div>
           <div class="box-body">
@@ -25,6 +25,20 @@
                 <div class="col-sm-8">
                 <?php echo form_input(array('name'=>'username','id'=>'username','class'=>'form-control'));?>
                 <?php echo form_error('username');?>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Jenis Kelamin</label>
+                <div class="col-sm-8">
+                  <?php echo form_dropdown('jenis_kelamin',$jenis_kelamin,set_value('id'),'id="jenis_kelamin" class="form-control select2"');?>
+                  <?php echo form_error('jenis_kelamin', '<span class="error-span">', '</span>'); ?>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-8">
+                <?php echo form_input(array('name'=>'email','id'=>'email','class'=>'form-control'));?>
+                <?php echo form_error('email');?>
                 </div>
             </div>
             <div class="form-group">
@@ -70,13 +84,6 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Alamat</label>
-                <div class="col-sm-8">
-                <?php echo form_input(array('name'=>'alamat','id'=>'alamat','class'=>'form-control'));?>
-                <?php echo form_error('alamat');?>
-                </div>
-            </div>
-            <div class="form-group">
                 <label class="col-sm-2 control-label">Save</label>
                 <div class="col-sm-8 tutup">
                 <?php
@@ -113,22 +120,24 @@ function save()
     } else{
         $.ajaxFileUpload
           ({
-            url:site+'cms/user/show_addForm',
+            url:site+'kelola/kelola_user/show_addForm',
             secureuri:false,
             fileElementId:'ufile',
             dataType: 'json',
             data: {
                 nama        : $("#nama").val(),
                 username    : $("#username").val(),
+                jenis_kelamin    : $("#jenis_kelamin").val(),
+                email       : $("#email").val(),
                 password    : $("#password").val(),
                 level       : $("#level").val(),
                 no_hp       : $("#no_hp").val(),
-                alamat      : $("#alamat").val(),
+                
               },
             success: function (data)
             {
               $.growl.notice({ title: 'Berhasil', message: data['msg'] });
-              load_silent("cms/user/","#content");
+              load_silent("kelola/kelola_user/","#content");
             },
             error: function (data, e)
             {

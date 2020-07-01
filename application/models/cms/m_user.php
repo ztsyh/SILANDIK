@@ -24,6 +24,11 @@ class M_user extends CI_Model {
             $this->db->update('cms_user',$data);
         }
 	}
+	public function deleteData($id='')
+	{
+		$this->db->where('id', $id);
+        $this->db->delete('cms_user');
+	}
 
 }
 
